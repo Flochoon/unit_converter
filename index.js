@@ -18,6 +18,9 @@ buttonEl.addEventListener("click", function() {
 
     let number = inputEl.value
 
+    if(isNaN(number)){
+        alert("You need to enter a number")
+    } else {
     let numberFeet = metersToFeet(inputEl.value)
     let numberMeters = feetToMeters(inputEl.value)
     lengthEl.innerText = `${number} meters = ${numberFeet} feet | ${number} feet = ${numberMeters} meters`
@@ -29,9 +32,7 @@ buttonEl.addEventListener("click", function() {
     let numberKilograms = poundsToKilograms(inputEl.value)
     let numberPounds = kilogramsToPounds(inputEl.value)
     massEl.innerText = `${number} kilograms = ${numberPounds} pounds | ${number} pounds = ${numberKilograms} kilograms`
-
-
-
+    }
 })
 
 function metersToFeet(number) {
